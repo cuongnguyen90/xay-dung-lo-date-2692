@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<script>
+    let myDate = function (day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay= function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYears = function () {
+            return this.year;
+        }
+        this.setDate = function () {
+            return this.day+","+this.month+","+this.year;
+        }
+        this.toString = function() {
+            return this.day+"/"+this.month+"/"+this.year;
+        }
+
+    }
+
+    let date = new myDate(2,3,2019);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYears();
+    let setDate = date.setDate();
+    let setString = date.toString();
+
+
+    console.log(setString)
+
+</script>
+</body>
+</html>
